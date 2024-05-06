@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_877c3ce40f2544b84e77a71e5507afea {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    
+                    <style>
+                        .foliumpopup {
+                            margin: auto;
+                        }
+                       .foliumpopup table{
+                            margin: auto;
+                        }
+                        .foliumpopup tr{
+                            text-align: left;
+                        }
+                        .foliumpopup th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_877c3ce40f2544b84e77a71e5507afea" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_877c3ce40f2544b84e77a71e5507afea = L.map(
+                "map_877c3ce40f2544b84e77a71e5507afea",
+                {
+                    center: [41.3134672, -105.5934338],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 14,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_2f0d6ecd425dfef140357e1302002b0b = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 13, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_2f0d6ecd425dfef140357e1302002b0b.addTo(map_877c3ce40f2544b84e77a71e5507afea);
+        
+    
+        function geo_json_320a0c36dc5a82f98ec23ace4247e16d_styler(feature) {
+            switch(feature.id) {
+                case "0": case "16": case "17": case "18": case "19": 
+                    return {"color": "#d8c474ff", "fillOpacity": 0.75, "fill_color": "#d8c474ff", "weight": 1};
+                case "1": case "2": case "3": case "4": case "5": case "6": 
+                    return {"color": "#3c40a2ff", "fillOpacity": 0.75, "fill_color": "#3c40a2ff", "weight": 1};
+                default:
+                    return {"color": "#c5c9c7ff", "fillOpacity": 0.75, "fill_color": "#c5c9c7ff", "weight": 1};
+            }
+        }
+
+        function geo_json_320a0c36dc5a82f98ec23ace4247e16d_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_320a0c36dc5a82f98ec23ace4247e16d = L.geoJson(null, {
+                onEachFeature: geo_json_320a0c36dc5a82f98ec23ace4247e16d_onEachFeature,
+            
+                style: geo_json_320a0c36dc5a82f98ec23ace4247e16d_styler,
+        });
+
+        function geo_json_320a0c36dc5a82f98ec23ace4247e16d_add (data) {
+            geo_json_320a0c36dc5a82f98ec23ace4247e16d
+                .addData(data);
+        }
+            geo_json_320a0c36dc5a82f98ec23ace4247e16d_add({"bbox": [-105.58407804460418, 41.31096335322811, -105.55769595050279, 41.31996046656626], "features": [{"bbox": [-105.56062710034111, 41.31096335322811, -105.55916151935281, 41.312390480418756], "geometry": {"coordinates": [[[-105.56062710034111, 41.31218812266148], [-105.56062710034111, 41.31096335322811], [-105.55916151935281, 41.31116570986537], [-105.55916151935281, 41.312390480418756], [-105.56062710034111, 41.31218812266148]]], "type": "Polygon"}, "id": "0", "properties": {"Biome": "Mountains", "CellID": 9757207369317613568, "CellToken": "876890681"}, "type": "Feature"}, {"bbox": [-105.55916151935281, 41.31361522428659, -105.55769595050279, 41.31504227994291], "geometry": {"coordinates": [[[-105.55916151935281, 41.31483994146815], [-105.55916151935281, 41.31361522428659], [-105.55769595050279, 41.313817561642296], [-105.55769595050279, 41.31504227994291], [-105.55916151935281, 41.31483994146815]]], "type": "Polygon"}, "id": "1", "properties": {"Biome": "Lake", "CellID": 9757207361264549888, "CellToken": "876890663"}, "type": "Feature"}, {"bbox": [-105.57821501793522, 41.31833069558197, -105.57674929151273, 41.31975786309518], "geometry": {"coordinates": [[[-105.57821501793522, 41.319555238097855], [-105.57821501793522, 41.31833069558197], [-105.57674929151273, 41.31853331946027], [-105.57674929151273, 41.31975786309518], [-105.57821501793522, 41.319555238097855]]], "type": "Polygon"}, "id": "2", "properties": {"Biome": "Lake", "CellID": 9757206982770556928, "CellToken": "8768900e1"}, "type": "Feature"}, {"bbox": [-105.57674929151273, 41.31853331946027, -105.57528357719389, 41.31996046656626], "geometry": {"coordinates": [[[-105.57674929151273, 41.31975786309518], [-105.57674929151273, 41.31853331946027], [-105.57528357719389, 41.31873592181251], [-105.57528357719389, 41.31996046656626], [-105.57674929151273, 41.31975786309518]]], "type": "Polygon"}, "id": "3", "properties": {"Biome": "Lake", "CellID": 9757206982233686016, "CellToken": "8768900df"}, "type": "Feature"}, {"bbox": [-105.57821501793522, 41.317106126380736, -105.57674929151273, 41.31853331946027], "geometry": {"coordinates": [[[-105.57821501793522, 41.31833069558197], [-105.57821501793522, 41.317106126380736], [-105.57674929151273, 41.317308749139606], [-105.57674929151273, 41.31853331946027], [-105.57821501793522, 41.31833069558197]]], "type": "Polygon"}, "id": "4", "properties": {"Biome": "Lake", "CellID": 9757206999413555200, "CellToken": "87689011f"}, "type": "Feature"}, {"bbox": [-105.57674929151273, 41.317308749139606, -105.57528357719389, 41.31873592181251], "geometry": {"coordinates": [[[-105.57674929151273, 41.31853331946027], [-105.57674929151273, 41.317308749139606], [-105.57528357719389, 41.317511350372605], [-105.57528357719389, 41.31873592181251], [-105.57674929151273, 41.31853331946027]]], "type": "Polygon"}, "id": "5", "properties": {"Biome": "Lake", "CellID": 9757206999950426112, "CellToken": "876890121"}, "type": "Feature"}, {"bbox": [-105.57528357719389, 41.317511350372605, -105.57381787498159, 41.31893850263901], "geometry": {"coordinates": [[[-105.57528357719389, 41.31873592181251], [-105.57528357719389, 41.317511350372605], [-105.57381787498159, 41.31771393008003], [-105.57381787498159, 41.31893850263901], [-105.57528357719389, 41.31873592181251]]], "type": "Polygon"}, "id": "6", "properties": {"Biome": "Lake", "CellID": 9757207001561038848, "CellToken": "876890127"}, "type": "Feature"}, {"bbox": [-105.58261226979586, 41.312824271321986, -105.5811465070797, 41.314251602309476], "geometry": {"coordinates": [[[-105.58261226979586, 41.3140489172122], [-105.58261226979586, 41.312824271321986], [-105.5811465070797, 41.31302695529812], [-105.5811465070797, 41.314251602309476], [-105.58261226979586, 41.3140489172122]]], "type": "Polygon"}, "id": "7", "properties": {"Biome": "City", "CellID": 9757206994044846080, "CellToken": "87689010b"}, "type": "Feature"}, {"bbox": [-105.58407804460418, 41.31262156581927, -105.58261226979586, 41.3140489172122], "geometry": {"coordinates": [[[-105.58407804460418, 41.313846210588146], [-105.58407804460418, 41.31262156581927], [-105.58261226979586, 41.312824271321986], [-105.58261226979586, 41.3140489172122], [-105.58407804460418, 41.313846210588146]]], "type": "Polygon"}, "id": "8", "properties": {"Biome": "City", "CellID": 9757207034310164480, "CellToken": "8768901a1"}, "type": "Feature"}, {"bbox": [-105.58407804460418, 41.313846210588146, -105.58261226979586, 41.31527353642035], "geometry": {"coordinates": [[[-105.58407804460418, 41.31507082867537], [-105.58407804460418, 41.313846210588146], [-105.58261226979586, 41.3140489172122], [-105.58261226979586, 41.31527353642035], [-105.58407804460418, 41.31507082867537]]], "type": "Polygon"}, "id": "9", "properties": {"Biome": "City", "CellID": 9757207035920777216, "CellToken": "8768901a7"}, "type": "Feature"}, {"bbox": [-105.58261226979586, 41.3140489172122, -105.58187938692608, 41.31476257567126], "geometry": {"coordinates": [[[-105.58261226979586, 41.31466123015157], [-105.58261226979586, 41.3140489172122], [-105.58187938692608, 41.31415026245167], [-105.58187938692608, 41.31476257567126], [-105.58261226979586, 41.31466123015157]]], "type": "Polygon"}, "id": "10", "properties": {"Biome": "City", "CellID": 9757206993709301760, "CellToken": "876890109c"}, "type": "Feature"}, {"bbox": [-105.58187938692608, 41.31415026245167, -105.5811465070797, 41.314863915809276], "geometry": {"coordinates": [[[-105.58187938692608, 41.31476257567126], [-105.58187938692608, 41.31415026245167], [-105.5811465070797, 41.314251602309476], [-105.5811465070797, 41.314863915809276], [-105.58187938692608, 41.31476257567126]]], "type": "Polygon"}, "id": "11", "properties": {"Biome": "City", "CellID": 9757206993575084032, "CellToken": "8768901094"}, "type": "Feature"}, {"bbox": [-105.58261226979586, 41.31466123015157, -105.58224582798307, 41.315018057622396], "geometry": {"coordinates": [[[-105.58261226979586, 41.31496738411979], [-105.58261226979586, 41.31466123015157], [-105.58224582798307, 41.31471190358413], [-105.58224582798307, 41.315018057622396], [-105.58261226979586, 41.31496738411979]]], "type": "Polygon"}, "id": "12", "properties": {"Biome": "City", "CellID": 9757206993289871360, "CellToken": "8768901083"}, "type": "Feature"}, {"bbox": [-105.58224582798307, 41.31471190358413, -105.58187938692608, 41.31506872977957], "geometry": {"coordinates": [[[-105.58224582798307, 41.315018057622396], [-105.58224582798307, 41.31471190358413], [-105.58187938692608, 41.31476257567126], [-105.58187938692608, 41.31506872977957], [-105.58224582798307, 41.315018057622396]]], "type": "Polygon"}, "id": "13", "properties": {"Biome": "City", "CellID": 9757206993323425792, "CellToken": "8768901085"}, "type": "Feature"}, {"bbox": [-105.58187938692608, 41.31476257567126, -105.58151294662494, 41.315119400591335], "geometry": {"coordinates": [[[-105.58187938692608, 41.31506872977957], [-105.58187938692608, 41.31476257567126], [-105.58151294662494, 41.314813246412974], [-105.58151294662494, 41.315119400591335], [-105.58187938692608, 41.31506872977957]]], "type": "Polygon"}, "id": "14", "properties": {"Biome": "City", "CellID": 9757206993491197952, "CellToken": "876890108f"}, "type": "Feature"}, {"bbox": [-105.58151294662494, 41.314813246412974, -105.5811465070797, 41.31517007005767], "geometry": {"coordinates": [[[-105.58151294662494, 41.315119400591335], [-105.58151294662494, 41.314813246412974], [-105.5811465070797, 41.314863915809276], [-105.5811465070797, 41.31517007005767], [-105.58151294662494, 41.315119400591335]]], "type": "Polygon"}, "id": "15", "properties": {"Biome": "City", "CellID": 9757206993457643520, "CellToken": "876890108d"}, "type": "Feature"}, {"bbox": [-105.58261226979586, 41.31496738411979, -105.58224582798307, 41.31532420999299], "geometry": {"coordinates": [[[-105.58261226979586, 41.31527353642035], [-105.58261226979586, 41.31496738411979], [-105.58224582798307, 41.315018057622396], [-105.58224582798307, 41.31532420999299], [-105.58261226979586, 41.31527353642035]]], "type": "Polygon"}, "id": "16", "properties": {"Biome": "Mountains", "CellID": 9757206993256316928, "CellToken": "8768901081"}, "type": "Feature"}, {"bbox": [-105.58224582798307, 41.315018057622396, -105.58187938692608, 41.315374882220205], "geometry": {"coordinates": [[[-105.58224582798307, 41.31532420999299], [-105.58224582798307, 41.315018057622396], [-105.58187938692608, 41.31506872977957], [-105.58187938692608, 41.315374882220205], [-105.58224582798307, 41.31532420999299]]], "type": "Polygon"}, "id": "17", "properties": {"Biome": "Mountains", "CellID": 9757206993356980224, "CellToken": "8768901087"}, "type": "Feature"}, {"bbox": [-105.58187938692608, 41.31506872977957, -105.58151294662494, 41.315425553101996], "geometry": {"coordinates": [[[-105.58187938692608, 41.315374882220205], [-105.58187938692608, 41.31506872977957], [-105.58151294662494, 41.315119400591335], [-105.58151294662494, 41.315425553101996], [-105.58187938692608, 41.315374882220205]]], "type": "Polygon"}, "id": "18", "properties": {"Biome": "Mountains", "CellID": 9757206993390534656, "CellToken": "8768901089"}, "type": "Feature"}, {"bbox": [-105.58151294662494, 41.315119400591335, -105.5811465070797, 41.315476222638374], "geometry": {"coordinates": [[[-105.58151294662494, 41.315425553101996], [-105.58151294662494, 41.315119400591335], [-105.5811465070797, 41.31517007005767], [-105.5811465070797, 41.315476222638374], [-105.58151294662494, 41.315425553101996]]], "type": "Polygon"}, "id": "19", "properties": {"Biome": "Mountains", "CellID": 9757206993424089088, "CellToken": "876890108b"}, "type": "Feature"}, {"bbox": [-105.5811465070797, 41.314863915809276, -105.58041363025704, 41.31557755767488], "geometry": {"coordinates": [[[-105.5811465070797, 41.315476222638374], [-105.5811465070797, 41.314863915809276], [-105.58041363025704, 41.31496525056565], [-105.58041363025704, 41.31557755767488], [-105.5811465070797, 41.315476222638374]]], "type": "Polygon"}, "id": "20", "properties": {"Biome": "City", "CellID": 9757206995185696768, "CellToken": "87689010f4"}, "type": "Feature"}, {"bbox": [-105.5811465070797, 41.315476222638374, -105.58041363025704, 41.31618985811326], "geometry": {"coordinates": [[[-105.5811465070797, 41.31608852279668], [-105.5811465070797, 41.315476222638374], [-105.58041363025704, 41.31557755767488], [-105.58041363025704, 41.31618985811326], [-105.5811465070797, 41.31608852279668]]], "type": "Polygon"}, "id": "21", "properties": {"Biome": "City", "CellID": 9757206992635559936, "CellToken": "876890105c"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+    geo_json_320a0c36dc5a82f98ec23ace4247e16d.bindPopup(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature=>typeof(feature)=='object' ? JSON.stringify(feature) : feature;
+    let fields = ["Biome"];
+    let aliases = ["Biome"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i].toLocaleString()}</th>
+            
+            <td>${handleObject(layer.feature.properties[v]).toLocaleString()}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{"className": "foliumpopup"});
+                     
+    
+            geo_json_320a0c36dc5a82f98ec23ace4247e16d.addTo(map_877c3ce40f2544b84e77a71e5507afea);
+        
+</script>
+</html>
